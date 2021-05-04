@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;   
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #FAEBD7;
+}
+
+header{
+    background-color: #6495ED;
+    text-align: right;
+    padding: 1.5em;
+    line-height: 2em;
+}
+
+h1 a{
+    color: #FAEBD7;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+}
+
+nav ul li a:link, nav ul li a:visited{
+    color: #FAEBD7;
+    text-decoration: none;
+}
+
+nav ul li a:active, nav ul li a:hover{
+    color: #DEB887;
+    text-decoration: underline;
+}
+
+nav ul li{
+    color: #FAEBD7;
+    list-style: none;
+}
+
+main{
+    background-color: #FAEBD7;
+}
+
+.post-content h2 a:link, .post-content h2 a:visited {
+    color: black;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+}
+
+.post-content h2 a:active{
+    color:  #DEB887;
+    text-decoration: underline;
+    
+}
+
+.post-content h2 a:hover {
+    color: #6495ED;
+    text-decoration: underline;
+}
+
+
+.post-content p a:link, .post-content p a:visited{
+    color:#6495ED;
+    text-decoration: none;
+}
+
+.post-content p a:active, .post-content p a:hover{
+    color: #DEB887;
+    text-decoration: underline;
+}
+
+article{
+    background-color: white;
+    margin: 2em .8em 2em .8em;
+    box-shadow: 2px 2px 2px 2px rgb(216, 216, 216);
+    padding: 1em;
+}
+
+figure img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.post-date{
+    color: grey;
+    font-weight: 600;
+}
+
+/* 35em is also 560px when basefont is 16px */
+@media only screen and (min-width: 35rem) {
+    body div{
+        display: grid;
+        grid-template-columns: 25% 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    header{
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+
+    main{
+        grid-column: 2/4;
+        grid-row: 1/3;
+    }
+
+    article{
+        padding: 2em;
+        margin: 3em;
+    }
+
+    article h2{
+        text-align: center;
+    }
+
+    div.post-date{
+        display: flex;
+    }
+}
+
+
+
